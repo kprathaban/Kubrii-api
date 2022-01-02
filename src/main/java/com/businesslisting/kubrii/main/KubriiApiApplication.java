@@ -14,7 +14,7 @@ public class KubriiApiApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(KubriiApiApplication.class, args);
-		System.out.println("This is the Business Listing Project ");
+		System.out.println("This is the Kubrii Business Listing Project ");
 	}
 
 }
