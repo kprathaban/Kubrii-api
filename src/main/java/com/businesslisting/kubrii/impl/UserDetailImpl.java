@@ -44,4 +44,9 @@ public class UserDetailImpl implements UserDetailApi {
 		return userDetailService.updateUserDetail(userDetailsBO);
 	}
 
+	@Override
+	public String displayHome() {
+		return "welcome";
+	}
+
 }

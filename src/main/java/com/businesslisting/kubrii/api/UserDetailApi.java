@@ -16,6 +16,9 @@ import com.businesslisting.kubrii.bo.UserDetailBO;
 public interface UserDetailApi {
 	
 	
+	@GetMapping("/")
+	public String displayHome();	
+	
 	/**
 	 * Create UserDetail
 	 * @param userDetailsBO
