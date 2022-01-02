@@ -15,7 +15,7 @@ public class KubriiApiApplication extends SpringBootServletInitializer{
 
 	public static void main(String[] args) {
 		SpringApplication.run(KubriiApiApplication.class, args);
-		System.out.println("This is a first weservive of the Kubrii Business Listing Project ");
+		System.out.println("This is the first web servive of Kubrii Business Listing Project ");
 	}
 
 }
