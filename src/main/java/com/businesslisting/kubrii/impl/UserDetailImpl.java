@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.web.client.RestTemplate;
 
 import com.businesslisting.kubrii.api.UserDetailApi;
 import com.businesslisting.kubrii.bo.UserDetailBO;
@@ -14,6 +15,9 @@ public class UserDetailImpl implements UserDetailApi {
 
 	@Autowired
 	private UserDetailService userDetailService;
+
+	@Autowired
+	private RestTemplate restTemplate;
 
 	@Override
 	public UserDetailBO getUserDetail(Integer userId) {
@@ -46,7 +50,10 @@ public class UserDetailImpl implements UserDetailApi {
 
 	@Override
 	public String displayHome() {
-		return "welcome";
+
+		String empName = restTemplate.getForObject("http://employee-service-api/employee", String.class);
+
+		return empName;
 	}
 
 }
